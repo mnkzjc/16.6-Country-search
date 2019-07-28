@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Country Search Engine</title>
-    <script src="https://kit.fontawesome.com/02f8c940af.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -16,7 +15,50 @@
         <li>No data</li>
     </ul>
 
-    
+
+    <div>
+
+    </div>
+
+<script src="vendor/mustache.js"></script>    
+
+<script id="country-template" type="x-tmpl-mustache">
+    <div>
+        <table>
+            <thead>
+                <th colspan="2"><img src="{{ flag }}" alt="flag"> {{ name }}</th>
+            </thead>
+            <tbody>
+                <tr><th colspan="2">Background information:</th></tr>
+                <tr>
+                    <th>Native Name</th>
+                    <td>{{ nativeName }}</td>
+                </tr>
+                <tr>
+                    <th>Capital</th>
+                    <td>{{ capital }}</td>
+                </tr>
+                <tr>
+                    <th>Subregion</th>
+                    <td>{{ subregion }}</td>
+                </tr>
+                <tr>
+                    <th>Currency</th>
+                    <td>{{ #currencies }}{{ name }}{{ /currencies }}</td>
+                </tr>
+                <tr>
+                    <th>Language</th>
+                    <td>{{ #languages }}{{ name }} {{ /languages }}</td>
+                </tr>
+                <tr>
+                    <th>Population</th>
+                    <td>{{ population }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
+
 <script src="js/script.js"></script>    
 </body>
 </html>

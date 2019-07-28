@@ -1,6 +1,6 @@
 "use strict";
 
-var url = 'https://restcountries.eu/rest/v1/name/';
+var url = 'https://restcountries.eu/rest/v2/name/';
 var countriesList = document.getElementById('countries');
 
 document.getElementById('search').addEventListener('click', searchCountries);
@@ -19,7 +19,13 @@ function showCountriesList(resp) {
     countriesList.innerHTML = '';
     resp.forEach(function(item) {
         var liEl = document.createElement('li');
-        liEl.innerText = item.name;
+        liEl.innerHTML = Mustache.render(countryTemplate, item);
         countriesList.appendChild(liEl);
     });
 }
+
+
+//  Mustache
+var countryTemplate = document.getElementById('country-template').innerHTML;
+Mustache.parse(countryTemplate);
+
