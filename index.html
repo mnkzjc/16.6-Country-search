@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Country search engine</h1>
-    <button id="search">Search a country</button>
     <input id="country-name" type="text" />
+    <button id="search">Search a country</button>
     <h2>List of countries</h2>
     <ul id="countries">
         <li>No data</li>
@@ -47,8 +47,8 @@
                     <td>{{ #currencies }}{{ name }}{{ /currencies }}</td>
                 </tr>
                 <tr>
-                    <th>Language</th>
-                    <td>{{ #languages }}{{ name }} {{ /languages }}</td>
+                    <th>Languages</th>
+                    <td>{{ #languages }}{{ name }}, {{ /languages }}</td>
                 </tr>
                 <tr>
                     <th>Population</th>

@@ -1,10 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,400i|Roboto:400,400i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 #countries {
   list-style-type: none;
 }
 
 #countries li {
   margin-bottom: 30px;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
 table {

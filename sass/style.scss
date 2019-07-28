@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,400i|Roboto:400,400i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 #countries {
     list-style-type: none;
@@ -7,10 +7,12 @@
     }
 }
 
-
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
 
 table {
-    // border: 1px solid black;
     border-collapse: collapse;
 }
 
